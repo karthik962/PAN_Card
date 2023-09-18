@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Card Application</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        span{
+            color: red;
+        }
+        table, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+    <div>
+        <!-- Heading & Application Form Starts Here -->
+        <div style="background-color: rgb(255, 240, 240);">
+            <!-- Heading Starts Here -->
+            <div style="background-color: brown; color: white; text-align: center;">
+                <h4>Request for New PAN Card or/and Changes or Correction in PAN Data</h4>
+                <p>Fields Marked with <span>*</span> (asterisk) are Mandatory. To avoid Mistake(s), please refer <u style="color: orange;">guidelines</u> and <u style="color: orange;">instructions</u></p>
+            </div>
+            <!-- Heading Ends Here -->
+            <!-- Table Starts Here -->
+            <div>
+                <table style="width: 100%; font-weight: bold;">
+                    <tr>
+                        <td></td>
+                        <td><span>*</span> Whether Citizen of India
+                            <label for="Yes" style="padding-left: 30px; font-weight: lighter;">Yes</label>
+                            <input type="radio" name="" id="Yes">
+                            <label for="No" style="padding-left: 20px; font-weight: lighter">No</label>
+                            <input type="radio" name="" id="No">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span>*</span> Permanent Account Number (PAN)
+                        <input type="text" name="PAN" id=""></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><span>*</span> 1. Name</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label for="">Title</label>
+
+                            <label for="" style="padding-left: 20px;">Shri/Mr.</label>
+                            <input type="radio" name="" id="">
+
+                            <label for="" style="padding-left: 20px;">Smt/Mrs.</label>
+                            <input type="radio" name="" id="">
+
+                            <label for="" style="padding-left: 20px;">Kumari/Ms.</label>
+                            <input type="radio" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                        <section style="display: inline-block;">
+                            <label for="">Last Name Surname</label><br>
+                            <input type="text" name="" id="">
+                        </section>
+                        <section style="display: inline-block; padding-left: 250px">
+                            <label for="">First Name</label><br>
+                            <input type="text" name="" id="">
+                        </section>
+                        <section style="display: inline-block; padding-left: 250px">
+                            <label for=""> Middle Name</label><br>
+                            <input type="text" name="" id="">
+                        </section>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+             <!-- Table Ends Here -->
+        </div>
+        <!-- Heading & Application Form Ends Here -->
+        <div></div>
+    </div>
+</body>
+</html>
