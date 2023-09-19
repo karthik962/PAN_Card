@@ -16,6 +16,17 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+        div{
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .paper{
+            width: 100%;
+            border-color: transparent;
+            font-size:85%;
+        }
     </style>
 </head>
 <body>
@@ -543,8 +554,8 @@
         </div>
         <!-- Heading & Application Form Ends Here -->
         <!-- Paperless Section Stars Here -->
-        <div style=" margin-bottom: 500px; width: 100%;">
-            <table style="border: none; border-collapse: collapse;">
+        <div style=" margin-bottom: 500px;">
+            <table class="paper">
                 <tr>
                     <td colspan="3">
                         For Paperless PAN Application
@@ -555,12 +566,39 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="dsc" id="dsc">
+                    <td colspan="3"><input type="radio" name="dsc" id="dsc">
                     <label for="dsc">DSC</label>
-                    <select name="docs" id="proof" style="width: 15%; background-color: silver;">
+                    <select name="docs" id="proof" style="width: 250px; background-color: silver;">
                         <option value="">--Please Select--</option>
-                        <option value="panc">PAN Card</option>
-                        <option value="pand">PAN Enrollment</option></td>
+                        <option value="dsc">DSC</option>
+                        <option value="evc">EVC</option>
+                    <span style="padding-left: 50px; color: brown;"><u>Guidelines for DSC User</u></span></td>
+                </tr>
+                <tr>
+                    <td style="width: 30%;"><label for="photo">Upload Photo</label></td>
+                    <td><input type="file" name="" id="photo"></td>
+                    <td><label for="sign">Upload Signature</label><input type="file" name="" id="sign" style="margin-left: 10px;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 30%;"><label for="docupload">Upload Document</label></td>
+                    <td colspan="2"><input type="file" name="" id="docupload"></td>
+                </tr>
+                <tr>
+                    <td style="width: 30%;"><label for="photo">ALREADY UPLOADED PHOTO:</label></td>
+                    <td colspan="2"><input type="text" name="photo" id="photo" style="width: 250px;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 30%;"><label for="sign">ALREADY UPLOADED SIGNATURE:</label></td>
+                    <td colspan="2"><input type="text" name="sign" id="sign" style="width: 150px;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 30%;"><label for="docupload">ALREADY UPLOADED DOCUMENTS:</label></td>
+                    <td colspan="2"><input type="text" name="docupload" id="docupload" style="width: 420px; height: 120px;"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: center;"><input type="button" value="Submit"></td>
+                    <td></td>
                 </tr>
             </table>
         </div>
