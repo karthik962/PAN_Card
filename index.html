@@ -23,9 +23,11 @@
             margin-bottom: 0;
         }
         .paper{
-            width: 100%;
+            border-style: none !important;
+            border-collapse: collapse;
             border-color: transparent;
-            font-size:85%;
+            font-size: 12px;
+            width: 100%;
         }
     </style>
 </head>
@@ -197,8 +199,59 @@
                             Association of Persons</p>
                         </td>
                         <td>
-                            <label for="DOB">DD MM YYYY</label><br>
-                            <input type="date" name="DOB" id="">
+                            <label for="DOB"><p>DD &nbsp&nbsp&nbsp&nbsp&nbsp MM &nbsp&nbsp&nbsp&nbsp&nbsp YYYY</p></label>
+                            <select list="date" style="background-color: silver; width: 45px;">
+                                <datalist id="date">
+                                    <option value="">	DD	</option>
+                                    <option value="">	01	</option>
+                                    <option value="">	02	</option>
+                                    <option value="">	03	</option>
+                                    <option value="">	04	</option>
+                                    <option value="">	05	</option>
+                                    <option value="">	06	</option>
+                                    <option value="">	07	</option>
+                                    <option value="">	08	</option>
+                                    <option value="">	09	</option>
+                                    <option value="">	10	</option>
+                                    <option value="">	11	</option>
+                                    <option value="">	12	</option>
+                                    <option value="">	13	</option>
+                                    <option value="">	14	</option>
+                                    <option value="">	15	</option>
+                                    <option value="">	16	</option>
+                                    <option value="">	17	</option>
+                                    <option value="">	18	</option>
+                                    <option value="">	19	</option>
+                                    <option value="">	20	</option>
+                                    <option value="">	21	</option>
+                                    <option value="">	22	</option>
+                                    <option value="">	23	</option>
+                                    <option value="">	24	</option>
+                                    <option value="">	25	</option>
+                                    <option value="">	26	</option>
+                                    <option value="">	27	</option>
+                                    <option value="">	28	</option>
+                                    <option value="">	29	</option>
+                                    <option value="">	30	</option>
+                                    <option value="">	31	</option>                                    
+                                </datalist></select>
+                                <select list="month" style="background-color: silver; width: 45px;">
+                                    <datalist id="month">
+                                        <option value="">	MM	</option>
+                                        <option value="">	01	</option>
+                                        <option value="">	02	</option>
+                                        <option value="">	03	</option>
+                                        <option value="">	04	</option>
+                                        <option value="">	05	</option>
+                                        <option value="">	06	</option>
+                                        <option value="">	07	</option>
+                                        <option value="">	08	</option>
+                                        <option value="">	09	</option>
+                                        <option value="">	10	</option>
+                                        <option value="">	11	</option>
+                                        <option value="">	12	</option>                                  
+                                    </datalist></select>
+                                    <input type="number" style="width: 66px;">
                         </td>
                     </tr>
                     <tr>
@@ -404,7 +457,7 @@
                         </td>
                         <td>
                             <input type="number" name="aadhaarno" id=""><br>
-                            <label for="aadhaarno"><p style="color: blue;">In Case AADHAAR Number is Provided <br>
+                            <label for="aadhaarno"><p style="font-weight: 549; color: blue;">In Case AADHAAR Number is Provided <br>
                             then Proof of AADHAAR along wiht supporting documents is to be submitted to NSDL</p></label>
                         </td>
                     </tr>
@@ -469,7 +522,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td colspan="2"><p style="text-align: right;">DD MM YYYY <br>Verify today, the <p id="date-container"></p></p></td>
+                        <td colspan="2"><div style="width: 18%; margin-left: 0px;"><p style="text-align: right;">DD MM YYYY <br>Verify today, the 18-04-2020 </p></div></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -556,8 +609,8 @@
         <!-- Paperless Section Stars Here -->
         <div style=" margin-bottom: 500px;">
             <table class="paper">
-                <tr>
-                    <td colspan="3">
+                <tr style="border: 0 none transparent;">
+                    <td colspan="3" style="border: 0 none transparent;">
                         For Paperless PAN Application
                         <input type="radio" name="yes" id="paperless" style="margin-left: 10px;">
                         <label for="paperless">Yes</label>
@@ -565,8 +618,8 @@
                         <label for="paperless">No</label>
                     </td>
                 </tr>
-                <tr>
-                    <td colspan="3"><input type="radio" name="dsc" id="dsc">
+                <tr  style="border: 0 none transparent;">
+                    <td colspan="3"  style="border: 0 none transparent;"><input type="radio" name="dsc" id="dsc">
                     <label for="dsc">DSC</label>
                     <select name="docs" id="proof" style="width: 250px; background-color: silver;">
                         <option value="">--Please Select--</option>
@@ -574,41 +627,35 @@
                         <option value="evc">EVC</option>
                     <span style="padding-left: 50px; color: brown;"><u>Guidelines for DSC User</u></span></td>
                 </tr>
-                <tr>
-                    <td style="width: 30%;"><label for="photo">Upload Photo</label></td>
-                    <td><input type="file" name="" id="photo"></td>
-                    <td><label for="sign">Upload Signature</label><input type="file" name="" id="sign" style="margin-left: 10px;"></td>
+                <tr  style="border: 0 none transparent;">
+                    <td style="width: 30%; border: 0 none transparent;"><label for="photo">Upload Photo</label></td>
+                    <td  style="border: 0 none transparent;"><input type="file" name="" id="photo"></td>
+                    <td  style="border: 0 none transparent;"><label for="sign">Upload Signature</label><input type="file" name="" id="sign" style="margin-left: 10px;"></td>
                 </tr>
-                <tr>
-                    <td style="width: 30%;"><label for="docupload">Upload Document</label></td>
-                    <td colspan="2"><input type="file" name="" id="docupload"></td>
+                <tr  style="border: 0 none transparent;">
+                    <td style="width: 30%; border: 0 none transparent;"><label for="docupload">Upload Document</label></td>
+                    <td colspan="2" style="border: 0 none transparent;"><input type="file" name="" id="docupload"></td>
                 </tr>
-                <tr>
-                    <td style="width: 30%;"><label for="photo">ALREADY UPLOADED PHOTO:</label></td>
-                    <td colspan="2"><input type="text" name="photo" id="photo" style="width: 250px;"></td>
+                <tr  style="border: 0 none transparent;">
+                    <td style="width: 30%; border: 0 none transparent;"><label for="photo">ALREADY UPLOADED PHOTO:</label></td>
+                    <td colspan="2" style="border: 0 none transparent;"><input type="text" name="photo" id="photo" style="width: 250px;"></td>
                 </tr>
-                <tr>
-                    <td style="width: 30%;"><label for="sign">ALREADY UPLOADED SIGNATURE:</label></td>
-                    <td colspan="2"><input type="text" name="sign" id="sign" style="width: 150px;"></td>
+                <tr style="border: 0 none transparent;">
+                    <td style="width: 30%; border: 0 none transparent;"><label for="sign">ALREADY UPLOADED SIGNATURE:</label></td>
+                    <td colspan="2" style="border: 0 none transparent;"><input type="text" name="sign" id="sign" style="width: 150px;"></td>
                 </tr>
-                <tr>
-                    <td style="width: 30%;"><label for="docupload">ALREADY UPLOADED DOCUMENTS:</label></td>
-                    <td colspan="2"><input type="text" name="docupload" id="docupload" style="width: 420px; height: 120px;"></td>
+                <tr  style="border: 0 none transparent;">
+                    <td style="width: 30%; border: 0 none transparent;"><label for="docupload">ALREADY UPLOADED DOCUMENTS:</label></td>
+                    <td colspan="2" style="border: 0 none transparent;"><input type="text" name="docupload" id="docupload" style="width: 420px; height: 120px;"></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align: center;"><input type="button" value="Submit"></td>
-                    <td></td>
+                <tr  style="border: 0 none transparent;">
+                    <td  style="border: 0 none transparent;"></td>
+                    <td style="text-align: center;border: 0 none transparent;"><input type="button" value="Submit"></td>
+                    <td  style="border: 0 none transparent;"></td>
                 </tr>
             </table>
         </div>
         <!-- Paperless Section Stars Ends -->
     </div>
 </body>
-<script>
-function getCurrentDateAndTime() {
-  const dateTime = new Date();
-  return dateTime.toLocaleString();
-}
-</script>
 </html>
