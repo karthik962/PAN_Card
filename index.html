@@ -22,7 +22,7 @@
     <!-- Main Container -->
     <div>
         <!-- Heading & Application Form Starts Here -->
-        <div style="background-color: rgb(255, 255, 245); margin-bottom: 500px;">
+        <div style="background-color: rgb(255, 255, 245);">
             <!-- Heading Starts Here -->
             <div style="background-color: brown; color: white; text-align: center;">
                 <h4>Request for New PAN Card or/and Changes or Correction in PAN Data</h4>
@@ -263,8 +263,9 @@
                     <tr>
                         <td></td>
                         <td>State/Union Territory</td>
-                        <td><input list="states" style="background-color: silver; width: 250px;" placeholder="Please Select">
+                        <td><select list="states" style="background-color: silver; width: 250px;" placeholder="--Please Select--">
                             <datalist id="states">
+                                <option value="">--Please choose an option--</option>
                                 <option>Andhra Pradesh</option>
                                 <option>Arunachal Pradesh</option>
                                 <option>Assam</option>
@@ -301,7 +302,7 @@
                                 <option>Delhi</option>
                                 <option>Lakshadweep</option>
                                 <option>Puducherry</option>
-                            </datalist></td>
+                            </datalist></select></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -311,10 +312,10 @@
                     <tr>
                         <td></td>
                         <td>Country</td>
-                        <td><input  list="country" style="background-color: silver;" placeholder="Please Select">
+                        <td><select  list="country" style="background-color: silver; width: 100px;" placeholder="--Please Select--">
                             <datalist id="country">
                                 <option>India</option>
-                            </datalist>
+                            </datalist></select>
                             </td>
                     </tr>
                     <tr>
@@ -339,10 +340,10 @@
                                 <tr>
                                     <td colspan="2">
                                         <label for="" style="font-weight: 500;">Country Code (ISD Code)</label><br>
-                                        <input list="isdcode"  style="background-color: silver; width: 300px" placeholder="Please Select">
+                                        <select list="isdcode"  style="background-color: silver; width: 300px" placeholder="--Please Select--">
                                         <datalist id="isdcode">
                                             <option>+91</option>
-                                        </datalist>
+                                        </datalist></select>
                                     </td>                                  
                                 </tr>
                                 <tr>
@@ -448,12 +449,128 @@
                         <td></td>
                         <td colspan="2"><p style="font-weight: 500;">I/We <input type="text" name="verify" id="" style="width: 400px;"> , the applicant, in the capacity of <input type="text" name="verify" id="" style="width: 200px;"> do hereby declare that what is stated above is true to <br>the best of my information and belief. <br> I have enclosed <input type="number" name="docs" id="" style="width: 75px;"> (number of documents) in support of proposed changes/corrections.</p></td>
                     </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">
+                            <label for="place">Place</label>
+                            <input type="text" name="" id="place" style="width: 200px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><p style="text-align: right;">DD MM YYYY <br>Verify today, the <p id="date-container"></p></p></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><p>
+                            I
+                            We have Enclosed <br>
+                            <select name="docs" id="proof" style="width: 90%; background-color: silver;">
+                                <option value="">--Please Select--</option>
+                                <option value="adc">Aadhaar Card</option>
+                                <option value="dl">Driving License</option>
+                                <option value="vid">Voter ID</option>
+                                <option value="pp">Passport</option>
+                                <option value="rcd">Ration Card</option>
+                                <option value="ogid">Other Govt. ID</option>
+                              </select> as proof <br>
+                            of identity, <select name="docs" id="proof" style="width: 80%; background-color: silver;">
+                                <option value="">--Please Select--</option>
+                                <option value="adc">Aadhaar Card</option>
+                                <option value="dl">Driving License</option>
+                                <option value="vid">Voter ID</option>
+                                <option value="pp">Passport</option>
+                                <option value="rcd">Ration Card</option>
+                                <option value="ogid">Other Govt. ID</option>
+                              </select> as proof of address, <br>
+                              <select name="docs" id="proof" style="width: 85%; background-color: silver;">
+                                <option value="">--Please Select--</option>
+                                <option value="adc">Aadhaar Card</option>
+                                <option value="dl">Driving License</option>
+                                <option value="vid">Voter ID</option>
+                                <option value="pp">Passport</option>
+                                <option value="bc">Birth Certificate</option>
+                                <option value="ogid">Other Govt. ID</option>
+                              </select> as proof of date of birth <br>
+                            and <select name="docs" id="proof" style="width: 15%; background-color: silver;">
+                                <option value="">--Please Select--</option>
+                                <option value="panc">PAN Card</option>
+                                <option value="pand">PAN Enrollment</option>
+                              </select> as proof of PAN alloted.
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">
+                            Whether you wish to have?
+                            <input type="radio" name="ppan" id="ppan" style="margin-left: 30px;">
+                            <label for="ppan" style="font-weight: 500;">Physical PAN Card & e-PAN Card</label>
+                            <input type="radio" name="epan" id="epan" style="margin-left: 30px;">
+                            <label for="epan" style="font-weight: 500; padding-right: 30px;">Only e-PAN Card</label>
+                            <u><i>Fees Applicable</i></u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">Other Details</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">1. Depository Account Details</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">
+                            <label for="dpid">DP ID:</label>
+                            <input type="text" name="dpid" id="dpid" style="width: 100px; margin-inline: 10px;">
+                            <label for="cid">Client ID:</label>
+                            <input type="text" name="cid" id="cid" style="width: 100px; margin-inline: 10px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">
+                            2. Payment Details
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="online" id="online"></td>
+                        <td colspan="2"><label for="online">Online Payment</label></td>
+                    </tr>
                 </table>
             </div>
              <!-- Table Ends Here -->
         </div>
         <!-- Heading & Application Form Ends Here -->
-        <div></div>
+        <!-- Paperless Section Stars Here -->
+        <div style=" margin-bottom: 500px; width: 100%;">
+            <table style="border: none; border-collapse: collapse;">
+                <tr>
+                    <td colspan="3">
+                        For Paperless PAN Application
+                        <input type="radio" name="yes" id="paperless" style="margin-left: 10px;">
+                        <label for="paperless">Yes</label>
+                        <input type="radio" name="no" id="paperless" style="margin-left: 10px;">
+                        <label for="paperless">No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="dsc" id="dsc">
+                    <label for="dsc">DSC</label>
+                    <select name="docs" id="proof" style="width: 15%; background-color: silver;">
+                        <option value="">--Please Select--</option>
+                        <option value="panc">PAN Card</option>
+                        <option value="pand">PAN Enrollment</option></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Paperless Section Stars Ends -->
     </div>
 </body>
+<script>
+function getCurrentDateAndTime() {
+  const dateTime = new Date();
+  return dateTime.toLocaleString();
+}
+</script>
 </html>
